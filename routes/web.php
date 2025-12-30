@@ -5,6 +5,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\CrudController;
+use App\Http\Controllers\Admin\HeroController;
+use App\Http\Controllers\Admin\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +20,7 @@ use App\Http\Controllers\CrudController;
 
 Route::get('/', [ViewController::class, 'index'])->name('home');
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -34,7 +34,14 @@ Route::post('/crud', [CrudController::class,'store'])->name('store');
 
 Route::prefix('vaisov713')->middleware('auth')->name('admin.')->group(function(){
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');
-    Route::get('/hero', [AdminController::class,'hero'])->name('hero');
+    Route::get('/hero', [HeroController::class,'index'])->name('hero');
+    Route::put('/hero/{id}', [HeroController::class,'update'])->name('hero_update');
+    Route::get('/resume', [AdminController::class,'resume'])->name('resume');
+    Route::get('/services', [AdminController::class,'services'])->name('services');
+    Route::get('/settings', [AdminController::class,'settings'])->name('settings');
+    Route::get('/skills', [AdminController::class,'skills'])->name('skills');
+    Route::get('/portfolio', [AdminController::class,'portfolio'])->name('portfolio');
+    Route::get('/contact', [AdminController::class,'contact'])->name('contact');
 });
 
 require __DIR__.'/auth.php';

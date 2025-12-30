@@ -74,7 +74,7 @@
           <li><a href="#resume">Resume</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#services">Services</a></li>
-          
+
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -93,20 +93,20 @@
 
           <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
             <div class="content-wrapper">
-              <h1 class="hero-title">Creative <span class="typed" data-typed-items="Designer, Developer, Freelancer, Artist"></span></h1>
-              <p class="lead">I create digital experiences that inspire and engage. With a passion for clean design and innovative solutions, I transform ideas into beautiful, functional realities.</p>
+              <h1 class="hero-title">Creative <span class="typed" data-typed-items="{{ $hero->main; }}"></span></h1>
+              <p class="lead">{{ $hero->subtitle; }}</p>
 
               <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="2">0</span>
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $hero->project }}" data-purecounter-duration="2">0</span>
                   <span class="stat-label">Projects Completed</span>
                 </div>
                 <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="2">0</span>
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $hero->experince }}" data-purecounter-duration="2">0</span>
                   <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-item">
-                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2">0</span>
+                  <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $hero->clients }}" data-purecounter-duration="2">0</span>
                   <span class="stat-label">Happy Clients</span>
                 </div>
               </div>

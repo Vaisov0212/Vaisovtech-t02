@@ -7,6 +7,7 @@
   <title>Admin Panel - Portfolio Management</title>
   <meta name="description" content="Portfolio Admin Panel - Manage your portfolio content">
   <meta name="keywords" content="admin, portfolio, management, dashboard">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <!-- Favicons -->
   <link href="{{ asset('/dashboard/img/favicon.png')}}"  rel="icon">
@@ -60,25 +61,25 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="#skills" class="menu-link">
+        <a href="{{ route('admin.skills') }}" class="menu-link">
           <i class="bi bi-gear"></i>
           <span>Skills Section</span>
         </a>
       </li>
       <li class="menu-item">
-        <a href="#resume" class="menu-link">
+        <a href="{{ route('admin.resume') }}" class="menu-link">
           <i class="bi bi-file-earmark-text"></i>
           <span>Resume Section</span>
         </a>
       </li>
       <li class="menu-item">
-        <a href="#services" class="menu-link">
+        <a href="{{ route('admin.services') }}" class="menu-link">
           <i class="bi bi-briefcase"></i>
           <span>Services Section</span>
         </a>
       </li>
       <li class="menu-item">
-        <a href="#portfolio" class="menu-link">
+        <a href="{{ route('admin.portfolio') }}" class="menu-link">
           <i class="bi bi-collection"></i>
           <span>Portfolio Section</span>
         </a>
@@ -90,7 +91,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="#contact" class="menu-link">
+        <a href="{{ route('admin.contact') }}" class="menu-link">
           <i class="bi bi-envelope"></i>
           <span>Contact Section</span>
         </a>
@@ -137,9 +138,17 @@
             <div class="profile-dropdown">
               <a href="#"><i class="bi bi-person"></i> Profile</a>
               <a href="#"><i class="bi bi-gear"></i> Settings</a>
-              <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
+              <a href="#" onclick="logouts()" ><i class="bi bi-box-arrow-right"></i> Logout</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                     @csrf
+                </form>
             </div>
           </div>
         </div>
       </div>
     </header>
+
+<div class="container">
+    @yield('message_success')
+</div>
+

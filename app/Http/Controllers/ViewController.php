@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Hero;
 
 class ViewController extends Controller
 {
     public function index(){
-        return view('index');
+        $hero=Hero::findOrFail(1);
+        return view('index',compact('hero'));
     }
 }

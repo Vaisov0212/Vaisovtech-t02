@@ -16,7 +16,12 @@
   {{-- <script src="{{ asset('/dashboard/js/admin.js')}}"></script> --}}
   {{-- <script src="{{ asset('/dashboard/vendor/aos/aos.js')}}"></script> --}}
 
-
+<script>
+function logouts(){
+    event.preventDefault();
+    document.getElementById('logout-form').submit();
+}
+</script>
 </body>
 
 </html>
