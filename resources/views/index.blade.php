@@ -4,11 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Style Bootstrap Template</title>
+  <title>bosh sahifa</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
   <!-- Favicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.1/css/flag-icons.min.css">
+
   <link href="{{asset('client/assets/img/favicon.png')}}" rel="icon">
   <link href="{{asset('client/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
@@ -57,25 +59,23 @@
         <a href="index.html" class="logo d-flex align-items-center justify-content-center active">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="{{asset('client/assets/img/logo.webp')}}" alt=""> -->
-          <h1 class="sitename">Alex Smith</h1>
+          <h1 class="sitename">Vaisov Azamat</h1>
         </a>
 
-        <div class="social-links text-center">
-          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <div class="text-center">
+          <a href="/lang/uz" class="mx-2 d-inline-block "><i class="fi fi-uz"></i></a>
+          <a href="/lang/ru" class="mx-2 d-inline-block "><i class="fi fi-ru"></i></a>
+          <a href="/lang/en" class="mx-2 d-inline-block "><i class="fi fi-gb"></i></a>
         </div>
 
         <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="#hero">{{ __('home') }}</a></li>
+          <li><a href="#about">{{ __('about') }}</a></li>
+          <li><a href="#resume">{{ __('resume') }}</a></li>
+          <li><a href="#portfolio">{{ __('portfolio') }}</a></li>
+          <li><a href="#services">{{ __('services') }}</a></li>
 
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">{{ __('contact') }}</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -93,28 +93,25 @@
 
           <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-delay="100">
             <div class="content-wrapper">
-              <h1 class="hero-title">Creative <span class="typed" data-typed-items="{{ $hero->main; }}"></span></h1>
+              <h1 class="hero-title">creative <span class="typed" data-typed-items="{{ $hero->main; }}"></span></h1>
               <p class="lead">{{ $hero->subtitle; }}</p>
 
               <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-item">
                   <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $hero->project }}" data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Projects Completed</span>
+                  <span class="stat-label">Loyihalar</span>
                 </div>
                 <div class="stat-item">
                   <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $hero->experince }}" data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Years Experience</span>
+                  <span class="stat-label">Yillik tajriba</span>
                 </div>
                 <div class="stat-item">
                   <span class="purecounter" data-purecounter-start="0" data-purecounter-end="{{ $hero->clients }}" data-purecounter-duration="2">0</span>
-                  <span class="stat-label">Happy Clients</span>
+                  <span class="stat-label">Mijozlar</span>
                 </div>
               </div>
 
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-                <a href="#portfolio" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
-              </div>
+
 
               <div class="social-links" data-aos="fade-up" data-aos-delay="400">
                 <a href="#"><i class="bi bi-twitter"></i></a>
@@ -129,8 +126,8 @@
             <div class="image-container">
               <div class="floating-elements">
                 <div class="floating-card card-1" data-aos="zoom-in" data-aos-delay="300">
-                  <i class="bi bi-palette"></i>
-                  <span>UI/UX Design</span>
+                  <i class="bi bi-braces"></i>
+                  <span>Yaxshi Dasturchi</span>
                 </div>
                 <div class="floating-card card-2" data-aos="zoom-in" data-aos-delay="400">
                   <i class="bi bi-code-slash"></i>
@@ -156,7 +153,7 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>About</h2>
+        <h2>Biz haqimizda</h2>
         <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
@@ -179,30 +176,32 @@
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
             <div class="about-content">
               <div class="intro">
-                <h2>Hi, I'm Brandon - a Creative Developer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+                <h2>Salom! Men Vaisov Azamat,</h2>
+                <p> 27 yoshdaman, back-end dasturchi sifatida PHP va Laravel bilan ishlayman. 2015-yildan IT sohasiga qiziqib, 2021-yildan professional faoliyatni boshladim.
+
+Men samarali, barqaror va xavfsiz web yechimlar yaratishga intilaman. Har bir loyiha foydalanuvchi va biznes uchun qulay va foydali yechimlar yaratadi. Yangi texnologiyalarni o‘rganish va loyihalarni optimallashtirish – mening ishga bo‘lgan ishtiyoqimni oshiradi.</p>
               </div>
 
               <div class="skills-grid">
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
                   <div class="skill-icon">
-                    <i class="bi bi-palette"></i>
+                    <i class="bi bi-braces"></i>
                   </div>
-                  <h4>UI/UX Design</h4>
+                  <h4>PHP</h4>
                   <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="450">
                   <div class="skill-icon">
                     <i class="bi bi-code-slash"></i>
                   </div>
-                  <h4>Frontend Dev</h4>
+                  <h4>Laravel</h4>
                   <p>Sed porttitor lectus nibh. Cras ultricies ligula sed magna</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
                   <div class="skill-icon">
-                    <i class="bi bi-camera"></i>
+                    <i class="bi bi-database-check"></i>
                   </div>
-                  <h4>Photography</h4>
+                  <h4>SQL</h4>
                   <p>Vestibulum ac diam sit amet quam vehicula elementum</p>
                 </div>
               </div>
@@ -334,7 +333,7 @@
                 <div class="col-md-6" data-aos="flip-left" data-aos-delay="400">
                   <div class="skill-card">
                     <div class="skill-header">
-                      <i class="bi bi-palette"></i>
+                      <i class="bi bi-layers-half"></i>
                       <h3>Design &amp; Tools</h3>
                     </div>
                     <div class="skills-animation">
@@ -374,7 +373,7 @@
                 <div class="col-md-6" data-aos="flip-left" data-aos-delay="500">
                   <div class="skill-card">
                     <div class="skill-header">
-                      <i class="bi bi-cloud"></i>
+                      <i class="bi bi-shield-fill-check"></i>
                       <h3>Cloud &amp; DevOps</h3>
                     </div>
                     <div class="skills-animation">
@@ -927,299 +926,13 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-12">
-            <div class="critic-reviews" data-aos="fade-up" data-aos-delay="300">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">The New York Times</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-half"></i>
-                    </div>
-                    <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">Washington Post</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="critic-review">
-                    <div class="review-quote">"</div>
-                    <div class="stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-                    <div class="critic-info">
-                      <div class="critic-name">The Guardian</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonials-container">
-              <div class="swiper testimonials-slider init-swiper" data-aos="fade-up" data-aos-delay="400">
-                <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 600,
-                    "autoplay": {
-                      "delay": 5000
-                    },
-                    "slidesPerView": 1,
-                    "spaceBetween": 30,
-                    "pagination": {
-                      "el": ".swiper-pagination",
-                      "type": "bullets",
-                      "clickable": true
-                    },
-                    "breakpoints": {
-                      "768": {
-                        "slidesPerView": 2
-                      },
-                      "992": {
-                        "slidesPerView": 3
-                      }
-                    }
-                  }
-                </script>
-
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla quis lorem ut libero malesuada feugiat.
-                      </p>
-                      <div class="testimonial-profile">
-                        <img src="{{asset('client/assets/img/person/person-f-1.webp')}}" alt="Reviewer" class="img-fluid rounded-circle">
-                        <div>
-                          <h3>Jane Smith</h3>
-                          <h4>Book Enthusiast</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Vestibulum ante ipsum primis in faucibus orci luctus.
-                      </p>
-                      <div class="testimonial-profile">
-                        <img src="{{asset('client/assets/img/person/person-m-2.webp')}}" alt="Reviewer" class="img-fluid rounded-circle">
-                        <div>
-                          <h3>Michael Johnson</h3>
-                          <h4>Sci-Fi Blogger</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                      </div>
-                      <p>
-                        Quisque velit nisi, pretium ut lacinia in, elementum id enim. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.
-                      </p>
-                      <div class="testimonial-profile">
-                        <img src="{{asset('client/assets/img/person/person-f-3.webp')}}" alt="Reviewer" class="img-fluid rounded-circle">
-                        <div>
-                          <h3>Emily Davis</h3>
-                          <h4>Book Club President</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-
-                  <div class="swiper-slide">
-                    <div class="testimonial-item">
-                      <div class="stars">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur aliquet quam id dui posuere blandit. Lorem ipsum dolor sit amet, consectetur.
-                      </p>
-                      <div class="testimonial-profile">
-                        <img src="{{asset('client/assets/img/person/person-m-4.webp')}}" alt="Reviewer" class="img-fluid rounded-circle">
-                        <div>
-                          <h3>Robert Wilson</h3>
-                          <h4>Literary Reviewer</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div><!-- End testimonial item -->
-
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-12 text-center" data-aos="fade-up">
-            <div class="overall-rating">
-              <div class="rating-number">4.8</div>
-              <div class="rating-stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-              <p>Based on 230+ reviews</p>
-              <div class="rating-platforms">
-                <span>Goodreads</span>
-                <span>Amazon</span>
-                <span>Barnes &amp; Noble</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- /Testimonials Section -->
-
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
-
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Frequently Asked Questions</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-            </div>
-
-          </div><!-- End Faq Column-->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Faq Section -->
-
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <h2>Bog'lanish</h2>
+        <p>xizmatlar va takliflar bo'lsa biz bilan bog'lanishinggiz mumkin !</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1227,17 +940,17 @@
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Bog'lanish uchun ma'lumotlar</h3>
+              <p>Bizning hizmatlarimizdan foydalanishinggiz uchun biz bilan bog'laning</p>
 
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
                 <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
+                  <h4>Manzil</h4>
+                  <p>O'zbekiston, Xorazm viloyati </p>
+                  <p>Hazorasp tumani</p>
                 </div>
               </div>
 
@@ -1246,9 +959,9 @@
                   <i class="bi bi-telephone"></i>
                 </div>
                 <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
+                  <h4>Telefon:</h4>
+                  <p>+998 91 421 71 30</p>
+                  <p>+998 90 090 46 45</p>
                 </div>
               </div>
 
@@ -1257,9 +970,9 @@
                   <i class="bi bi-envelope"></i>
                 </div>
                 <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
+                  <h4>Email</h4>
+                  <p>karvak117@mail.ru</p>
+                  <p>karvak117@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -1267,33 +980,44 @@
 
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Xabar qoldirish</h3>
+              <p>Bizning xizmatlarimizdan foydalanish uchun habar qoldirishinggiz mumkin.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <form action="{{ route('contact_create') }}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+                @method('POST')
+                @csrf
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="name" class="form-control" placeholder="Ism Familya" required="">
                   </div>
 
                   <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    <input type="email" class="form-control" name="email" placeholder="Email" required="">
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <input type="text" class="form-control" name="subject" placeholder="Mavzu" required="">
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <textarea class="form-control" name="message" rows="6" placeholder="Xabar to'liq matni" required=""></textarea>
                   </div>
 
                   <div class="col-12 text-center">
                     <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
+                        @if ($errors->any())
+                        <div class="alert alert-sm alert-warning">
+                        <u>
+                                @foreach ($errors->all() as $err )
+                                <li>{{ $err }}</li>
+                                @endforeach
+                        </u>
+                         </div>
+                        @endif
+                    @if (session('success'))
+                        <div class="alert alert-success">Your message has been sent. Thank you!</div>
+                    @endif
                     <button type="submit" class="btn">Send Message</button>
                   </div>
 
@@ -1339,7 +1063,7 @@
 
   <!-- Vendor JS Files -->
   <script src="{{asset('client/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('client/assets/vendor/php-email-form/validate.js')}}"></script>
+  {{-- <script src="{{asset('client/assets/vendor/php-email-form/validate.js')}}"></script> --}}
   <script src="{{asset('client/assets/vendor/aos/aos.js')}}"></script>
   <script src="{{asset('client/assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
   <script src="{{asset('client/assets/vendor/typed.js/typed.umd.js')}}"></script>

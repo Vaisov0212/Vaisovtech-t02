@@ -7,6 +7,9 @@ use App\Http\Controllers\ViewController;
 use App\Http\Controllers\CrudController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\ContactController;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
+// use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,8 +22,18 @@ use App\Http\Controllers\Admin\ContactController;
 */
 
 Route::get('/', [ViewController::class, 'index'])->name('home');
+Route::post('/contact',[ContactController::class, 'create'])->name('contact_create');
 
+Route::get('/lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['uz', 'ru', 'en'])) {
+        abort(404);
+    }
 
+    Session::put('locale', $locale);
+    App::setLocale($locale);
+
+    return redirect()->back();
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -28,8 +41,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/crud', [CrudController::class,'create'])->name('create');
-Route::post('/crud', [CrudController::class,'store'])->name('store');
+// Route::get('/crud', [CrudController::class,'create'])->name('create');
+// Route::post('/crud', [CrudController::class,'store'])->name('store');
 
 
 Route::prefix('vaisov713')->middleware('auth')->name('admin.')->group(function(){
@@ -41,7 +54,8 @@ Route::prefix('vaisov713')->middleware('auth')->name('admin.')->group(function()
     Route::get('/settings', [AdminController::class,'settings'])->name('settings');
     Route::get('/skills', [AdminController::class,'skills'])->name('skills');
     Route::get('/portfolio', [AdminController::class,'portfolio'])->name('portfolio');
-    Route::get('/contact', [AdminController::class,'contact'])->name('contact');
+    Route::get('/contact', [ContactController::class,'index'])->name('contact');
+
 });
 
 require __DIR__.'/auth.php';
